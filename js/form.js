@@ -60,3 +60,20 @@ pwd.addEventListener('input', function ()
         pwdError.textContent = "password is not Valid";
     }
 });
+
+//uc3 -Mobile number implementation and validating mobile number
+const tel = document.querySelector('#tel');
+const telError = document.querySelector('.tel-error');
+tel.addEventListener('input', function () 
+{
+    let telRegex = RegExp('^[0-9]{2}[ ][0-9]{10}$');
+    //Checking number is valid or not using if else condition
+    if (telRegex.test(tel.value)) 
+    {
+        telError.textContent = "";
+    }
+    else 
+    {
+        telError.textContent = "telephone number is not Valid";
+    }
+});
